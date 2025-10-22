@@ -9,15 +9,15 @@
     body{display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:linear-gradient(180deg,#f6fbff,#eef6ff);}
     .card{width:760px;max-width:95%;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(20,40,80,0.08);padding:24px}
     h1{margin:0 0 10px;font-size:20px}
-    .inputs{display:flex;gap:12px;align-items:end;margin-bottom:18px;flex-wrap:wrap}
+    .inputs{display:flex;gap:10px;align-items:end;margin-bottom:18px;flex-wrap:wrap}
     label{display:block;font-size:12px;color:#415165}
-    input[type=number]{width:120px;padding:10px 12px;border-radius:8px;border:1px solid #d7e4f5;font-size:16px}
+    input[type=number]{width:80px;padding:10px 12px;border-radius:8px;border:1px solid #21976a;font-size:16px}
     .btn{padding:10px 14px;border-radius:8px;border:0;background:#2563eb;color:#fff;cursor:pointer}
     .results{margin-top:20px}
     .digit-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:8px}
-    .digit{min-width:54px;padding:10px;border-radius:8px;background:#fff;border:1px solid #e3eefc;text-align:center;font-weight:600}
+    .digit{min-width:20px;padding:10px;border-radius:8px;background:#fff;border:1px solid #1e5cad;text-align:center;font-weight:600}
     .small{font-size:12px;color:#5b6b82;margin-top:8px;text-align:center}
-    footer{margin-top:14px;font-size:13px;color:#556677;text-align:center}
+    footer{margin-top:14px;font-size:13px;color:#5caa38;text-align:center}
   </style>
 </head>
 <body>
@@ -70,6 +70,11 @@
       const dayRaw = document.getElementById('day').value;
       const monthRaw = document.getElementById('month').value;
       const yearRaw = document.getElementById('year').value;
+
+ // Force limits
+ // if (dayRaw > 31) dayPad = 31;document.getElementById('day').textContent= `Error`;
+ // if (monthRaw> 12) monthPad = 12;
+  //if (yearRaw> 9999) yearPad  = 9999;
 
       const dayPad = pad(Number(dayRaw) || 0, 2);
       const monthPad = pad(Number(monthRaw) || 0, 2);
