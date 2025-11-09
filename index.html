@@ -9,10 +9,10 @@
     body{display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:linear-gradient(180deg,#f6fbff,#eef6ff);}
     .card{width:760px;max-width:95%;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(20,40,80,0.08);padding:24px}
     h1{margin:0 0 10px;font-size:20px}
-    .inputs{display:flex;gap:10px;align-items:end;margin-bottom:18px;flex-wrap:wrap}
+    .inputs{display:flex;gap:10px;align-items:end;justify-content: center;margin-bottom:18px;flex-wrap:wrap}
     label{display:block;font-size:12px;color:#415165}
     input[type=number]{width:80px;padding:10px 12px;border-radius:8px;border:1px solid #21976a;font-size:16px}
-    .btn{padding:10px 14px;border-radius:8px;border:0;background:#2563eb;color:#fff;cursor:pointer}
+    
     .results{margin-top:20px}
     .digit-row{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;margin-bottom:8px}
     .digit{min-width:15px;padding:10px;border-radius:8px;background:#fff;border:1px solid #1e5cad;text-align:center;font-weight:600}
@@ -38,7 +38,7 @@
         <label for="year">Year</label>
         <input id="year" type="number" min="0" max="9999">
       </div>
-      <button id="calc" class="btn">Calculate</button>
+      
     </div>
 
     <div class="small" id="padded"></div>
@@ -104,7 +104,7 @@
       document.getElementById('year').value = today.getFullYear();
     }
 
-    document.getElementById('calc').addEventListener('click', computeAll);
+    
 
     ['day','month','year'].forEach(id=>{
       document.getElementById(id).addEventListener('input', computeAll);
@@ -115,6 +115,7 @@
   </script>
 </body>
 </html>
+
 
 
 
